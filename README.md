@@ -140,6 +140,9 @@ Each keeps the replies' bits; the numbers are this Mac's (`evidence/`).
   the harness's serving checks and its speed rulers.
 - The engine's doc for the family's Qwen2 path, with the kernel contract's summary, is
   `docs/recipes/bimo-7b-cyberagent-metal.md` in the pinned TensorFold branch.
+- No tensorfold.dev leaderboard entry: the board's community-v1 protocol wants five full 256-token repetitions a
+  cell, and the model ends the chat fixture at its own end token after 111 tokens on the protocol's second seed at
+  temperature 1, so the chat cell cannot be measured (code ran 50-53 tokens/s at temperature 1 in that attempt).
 
 ## License
 
