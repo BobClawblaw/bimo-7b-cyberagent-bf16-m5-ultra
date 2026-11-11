@@ -1,0 +1,14 @@
+{
+ "name": "tools",
+ "score": 0.15,
+ "cases": 60,
+ "passed": 9,
+ "seconds": 35.164628982543945,
+ "notes": [
+  "\"What's the weather in Lisbon?\": got []",
+  "'Weather in Oslo in fahrenheit please.': got []",
+  "'Is it raining in Tokyo right now?': got []",
+  "'Convert 250 euros to US dollars.': got []"
+ ],
+ "details": {}
+}

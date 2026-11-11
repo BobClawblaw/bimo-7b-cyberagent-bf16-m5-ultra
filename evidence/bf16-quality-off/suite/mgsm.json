@@ -1,0 +1,23 @@
+{
+ "name": "mgsm",
+ "score": 0.4,
+ "cases": 240,
+ "passed": 96,
+ "seconds": 1001.6212708950043,
+ "notes": [
+  "de 13/30, es 17/30, fr 18/30, ja 10/30, zh 17/30, ru 14/30, sw 3/30, bn 4/30"
+ ],
+ "details": {
+  "per_language": {
+   "de": 13,
+   "es": 17,
+   "fr": 18,
+   "ja": 10,
+   "zh": 17,
+   "ru": 14,
+   "sw": 3,
+   "bn": 4
+  },
+  "n": 30
+ }
+}

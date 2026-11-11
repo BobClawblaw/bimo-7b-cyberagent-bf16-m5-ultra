@@ -1,0 +1,11 @@
+{
+ "name": "snapshot",
+ "score": 1.0,
+ "cases": 12,
+ "passed": 12,
+ "seconds": 33.66056990623474,
+ "notes": [
+  "replies written to suite/replies.json"
+ ],
+ "details": {}
+}

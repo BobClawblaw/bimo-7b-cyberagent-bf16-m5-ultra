@@ -1,0 +1,110 @@
+{
+ "name": "long-tasks",
+ "score": 0.0,
+ "cases": 52,
+ "passed": 0,
+ "seconds": 25.272867679595947,
+ "notes": [
+  "mk-niah 0/1@28k, multi-value 0/4@28k, var-track 0/5@28k, common-words 0/10@32k, mk-niah 0/1@128k, multi-value 0/4@128k, var-track 0/5@128k, common-words 0/10@128k, mk-niah 0/1@512k, var-track 0/5@512k, mk-niah 0/1@900k, var-track 0/5@900k"
+ ],
+ "details": {
+  "rows": [
+   {
+    "task": "mk-niah",
+    "tokens": 28320,
+    "seconds": 7.0154471669811755,
+    "passed": 0,
+    "cases": 1,
+    "reply": "10441041"
+   },
+   {
+    "task": "multi-value",
+    "tokens": 28259,
+    "seconds": 8.656803707941435,
+    "passed": 0,
+    "cases": 4,
+    "reply": "382, 406, 434, 467, 491, 528, 553, 574, 609, 635, 661, 687, 713,"
+   },
+   {
+    "task": "var-track",
+    "tokens": 28234,
+    "seconds": 8.710354625014588,
+    "passed": 0,
+    "cases": 5,
+    "reply": "VAR SJY, VAR SJY, VAR SJY, VAR SJY, VAR SJY, VAR SJY, VAR SJY, VAR SJY, VAR SJY, VAR SJY, VAR SJY, VAR SJY, VAR SJY, VAR"
+   },
+   {
+    "task": "common-words",
+    "tokens": 32000,
+    "seconds": 0,
+    "passed": 0,
+    "cases": 10,
+    "reply": "failed: HTTP Error 400: Bad Request"
+   },
+   {
+    "task": "mk-niah",
+    "tokens": 128000,
+    "seconds": 0,
+    "passed": 0,
+    "cases": 1,
+    "reply": "failed: HTTP Error 400: Bad Request"
+   },
+   {
+    "task": "multi-value",
+    "tokens": 128000,
+    "seconds": 0,
+    "passed": 0,
+    "cases": 4,
+    "reply": "failed: HTTP Error 400: Bad Request"
+   },
+   {
+    "task": "var-track",
+    "tokens": 128000,
+    "seconds": 0,
+    "passed": 0,
+    "cases": 5,
+    "reply": "failed: HTTP Error 400: Bad Request"
+   },
+   {
+    "task": "common-words",
+    "tokens": 128000,
+    "seconds": 0,
+    "passed": 0,
+    "cases": 10,
+    "reply": "failed: HTTP Error 400: Bad Request"
+   },
+   {
+    "task": "mk-niah",
+    "tokens": 512000,
+    "seconds": 0,
+    "passed": 0,
+    "cases": 1,
+    "reply": "failed: HTTP Error 400: Bad Request"
+   },
+   {
+    "task": "var-track",
+    "tokens": 512000,
+    "seconds": 0,
+    "passed": 0,
+    "cases": 5,
+    "reply": "failed: HTTP Error 400: Bad Request"
+   },
+   {
+    "task": "mk-niah",
+    "tokens": 900000,
+    "seconds": 0,
+    "passed": 0,
+    "cases": 1,
+    "reply": "failed: HTTP Error 400: Bad Request"
+   },
+   {
+    "task": "var-track",
+    "tokens": 900000,
+    "seconds": 0,
+    "passed": 0,
+    "cases": 5,
+    "reply": "failed: HTTP Error 400: Bad Request"
+   }
+  ]
+ }
+}

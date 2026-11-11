@@ -1,0 +1,70 @@
+[
+ {
+  "name": "streaming",
+  "score": 1.0,
+  "cases": 4,
+  "passed": 4,
+  "seconds": 16.512649059295654,
+  "notes": [
+   "identical"
+  ],
+  "details": {}
+ },
+ {
+  "name": "multiturn",
+  "score": 1.0,
+  "cases": 8,
+  "passed": 8,
+  "seconds": 6.74307107925415,
+  "notes": [
+   "recalled 8/8 facts"
+  ],
+  "details": {
+   "reply": "Odile lives in Lyon. She has a cat named Pistache, who is 7 years old. Odile works as a luthier, repairing violins. Her favorite number is 314. She is traveling to Montreal on November 14th."
+  }
+ },
+ {
+  "name": "stop",
+  "score": 1.0,
+  "cases": 3,
+  "passed": 3,
+  "seconds": 2.1759588718414307,
+  "notes": [
+   "3/3 stopped before the string"
+  ],
+  "details": {}
+ },
+ {
+  "name": "thinking",
+  "score": 0.0,
+  "cases": 10,
+  "passed": 0,
+  "seconds": 116.32227993011475,
+  "notes": [
+   "10 replies without reasoning_content, 0 with think tags in content"
+  ],
+  "details": {}
+ },
+ {
+  "name": "copy",
+  "score": 1.0,
+  "cases": 2,
+  "passed": 2,
+  "seconds": 4.008848190307617,
+  "notes": [
+   "2/2 byte-identical"
+  ],
+  "details": {}
+ },
+ {
+  "name": "max-tokens",
+  "score": 0.6666666666666666,
+  "cases": 3,
+  "passed": 2,
+  "seconds": 0.7693328857421875,
+  "notes": [
+   "2/3 exact"
+  ],
+  "details": {}
+ }
+]

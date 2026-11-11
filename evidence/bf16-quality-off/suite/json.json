@@ -1,0 +1,15 @@
+{
+ "name": "json",
+ "score": 0.8333333333333334,
+ "cases": 30,
+ "passed": 25,
+ "seconds": 10.07797908782959,
+ "notes": [
+  "#6: Expecting ',' delimiter: line 1 column 102 (char 101)",
+  "#12: Expecting ',' delimiter: line 1 column 52 (char 51)",
+  "#20: Expecting ',' delimiter: line 1 column 89 (char 88)",
+  "#21: Expecting ',' delimiter: line 1 column 103 (char 102)",
+  "#28: Expecting ',' delimiter: line 1 column 44 (char 43)"
+ ],
+ "details": {}
+}

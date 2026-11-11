@@ -1,0 +1,11 @@
+{
+ "name": "vision-concurrent",
+ "score": 0.0,
+ "cases": 0,
+ "passed": 0,
+ "seconds": 0.3819878101348877,
+ "notes": [
+  "failed: every case refused alone: shapes, text, count, two images, video motion, video colours"
+ ],
+ "details": {}
+}

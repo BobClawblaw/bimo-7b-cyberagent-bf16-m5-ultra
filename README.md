@@ -134,12 +134,45 @@ Each keeps the replies' bits; the numbers are this Mac's (`evidence/`).
   kept states give way to streams that need the room.
 - **Not offered.** No int8 or fp8 cache, no fast-math, no reduced-precision sums, no drafter model.
 
+## Quality, thinking off
+
+The harness's quality suite (`quality-off` plan: the qwen Spark recipe's suite, greedy, replies up to 1,024 tokens,
+the model's own template, no system prompt), one run on this Mac on 10 Nov 2026, 3 h 50 min with its soak and
+concurrency checks (`evidence/bf16-quality-off`); HumanEval and the long-document sections were rerun the same
+evening with the sandbox and a 32k cap (`evidence/bf16-humaneval-long-32k-off`, the first run lost them to a missing
+sandbox and to documents over the window).
+
+| section | result |
+|---|---|
+| GSM8K | 180/250 (72.0%); 5 replies cut at 1,024 tokens |
+| MATH-500 | 207/500 (41.4%): level 1 33/43, 2 54/90, 3 50/105, 4 50/128, 5 20/134; 105 without a boxed answer |
+| GPQA diamond | 47/198 (23.7%); 31 without a letter |
+| MMLU | 182/342 (53.2%), 57 subjects x 6; machine learning and moral scenarios 0/6 |
+| MGSM | 96/240 (40.0%): de 13, es 17, fr 18, ja 10, zh 17, ru 14, sw 3, bn 4 of 30 each |
+| HumanEval | 79/164 (48.2%) pass@1; 75 of the 85 failures are syntax errors, nearly all a doubled closing parenthesis |
+| IFEval | 61/150 loose (40.7%), 57/150 strict |
+| JSON asked in the prompt | 25/30 |
+| tool calls | 9/60 (the published template renders no `tools`, see [above](#settings)) |
+| repetition | 0/8: repeated 4-grams 36.9% mean, 85.6% worst; 4 of 8 replies run to the 1,200-token limit |
+| needles | 3/3 at 7k tokens; the suite's 32k documents render past the window and are not measured |
+| long tasks (RULER-style) | 0/10 at 28k tokens (multi-key 0/1, multi-value 0/4, variable tracking 0/5); longer ones over the window |
+| soak, concurrent, drafts | 60/60, 12/12, 12/12 (drafted 52 tokens/s, undrafted 47 on that pass) |
+
+Three habits the suite exposes are the model's, not the engine's, checked by teacher-forcing the engine's replies
+through HF's bf16 run of the release (transformers 5.22.2, CPU): on two HumanEval replies with the doubled
+parentheses (214 and 191 tokens) HF's argmax equals the engine's token at every position, on the third (88 tokens)
+it differs once at a near-tie (log-probabilities -0.99 and -0.87); on the worst repetition reply HF agrees on all
+1,200 tokens. The vision and docvision sections do not apply (a text model), and the thinking cases (0/10) do not
+apply (no think block). The ruler after the suite ran 41-44 tokens/s against 46-54 fresh; this Mac's rulers vary
+between 40 and 64 tokens/s across runs because other applications share it (`evidence/*/ruler-*.json`).
+
 ## Notes
 
-- No quality suite was run on this recipe; the checks above are exactness against the release's own arithmetic,
-  the harness's serving checks and its speed rulers.
+- The quality suite above is the harness's own (zero-shot, greedy, its prompts and graders, 6 questions a subject
+  for MMLU), so its figures compare recipes on this suite, not with the model card's lm-eval settings.
 - The engine's doc for the family's Qwen2 path, with the kernel contract's summary, is
-  `docs/recipes/bimo-7b-cyberagent-metal.md` in the pinned TensorFold branch.
+  `docs/recipes/bimo-7b-cyberagent-metal.md` in the pinned TensorFold branch; its commit 9f1a37eb on the branch
+  adds the quality figures above and changes no code, so the recipe stays pinned at the measured 4cc353f0.
 - No tensorfold.dev leaderboard entry: the board's community-v1 protocol wants five full 256-token repetitions a
   cell, and the model ends the chat fixture at its own end token after 111 tokens on the protocol's second seed at
   temperature 1, so the chat cell cannot be measured (code ran 50-53 tokens/s at temperature 1 in that attempt).

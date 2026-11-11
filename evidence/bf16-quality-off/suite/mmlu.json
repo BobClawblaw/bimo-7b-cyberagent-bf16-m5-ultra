@@ -1,0 +1,242 @@
+{
+ "name": "mmlu",
+ "score": 0.5321637426900585,
+ "cases": 342,
+ "passed": 182,
+ "seconds": 633.7201542854309,
+ "notes": [
+  "57 subjects x 6; weakest machine_learning 0/6, moral_scenarios 0/6, high_school_us_history 1/6"
+ ],
+ "details": {
+  "per_subject": {
+   "abstract_algebra": [
+    3,
+    6
+   ],
+   "anatomy": [
+    3,
+    6
+   ],
+   "astronomy": [
+    5,
+    6
+   ],
+   "business_ethics": [
+    2,
+    6
+   ],
+   "clinical_knowledge": [
+    3,
+    6
+   ],
+   "college_biology": [
+    4,
+    6
+   ],
+   "college_chemistry": [
+    3,
+    6
+   ],
+   "college_computer_science": [
+    6,
+    6
+   ],
+   "college_mathematics": [
+    2,
+    6
+   ],
+   "college_medicine": [
+    2,
+    6
+   ],
+   "college_physics": [
+    3,
+    6
+   ],
+   "computer_security": [
+    4,
+    6
+   ],
+   "conceptual_physics": [
+    3,
+    6
+   ],
+   "econometrics": [
+    2,
+    6
+   ],
+   "electrical_engineering": [
+    2,
+    6
+   ],
+   "elementary_mathematics": [
+    4,
+    6
+   ],
+   "formal_logic": [
+    3,
+    6
+   ],
+   "global_facts": [
+    3,
+    6
+   ],
+   "high_school_biology": [
+    4,
+    6
+   ],
+   "high_school_chemistry": [
+    4,
+    6
+   ],
+   "high_school_computer_science": [
+    6,
+    6
+   ],
+   "high_school_european_history": [
+    2,
+    6
+   ],
+   "high_school_geography": [
+    5,
+    6
+   ],
+   "high_school_government_and_politics": [
+    5,
+    6
+   ],
+   "high_school_macroeconomics": [
+    2,
+    6
+   ],
+   "high_school_mathematics": [
+    4,
+    6
+   ],
+   "high_school_microeconomics": [
+    3,
+    6
+   ],
+   "high_school_physics": [
+    2,
+    6
+   ],
+   "high_school_psychology": [
+    3,
+    6
+   ],
+   "high_school_statistics": [
+    4,
+    6
+   ],
+   "high_school_us_history": [
+    1,
+    6
+   ],
+   "high_school_world_history": [
+    5,
+    6
+   ],
+   "human_aging": [
+    2,
+    6
+   ],
+   "human_sexuality": [
+    3,
+    6
+   ],
+   "international_law": [
+    2,
+    6
+   ],
+   "jurisprudence": [
+    4,
+    6
+   ],
+   "logical_fallacies": [
+    3,
+    6
+   ],
+   "machine_learning": [
+    0,
+    6
+   ],
+   "management": [
+    3,
+    6
+   ],
+   "marketing": [
+    4,
+    6
+   ],
+   "medical_genetics": [
+    4,
+    6
+   ],
+   "miscellaneous": [
+    4,
+    6
+   ],
+   "moral_disputes": [
+    4,
+    6
+   ],
+   "moral_scenarios": [
+    0,
+    6
+   ],
+   "nutrition": [
+    4,
+    6
+   ],
+   "philosophy": [
+    5,
+    6
+   ],
+   "prehistory": [
+    2,
+    6
+   ],
+   "professional_accounting": [
+    3,
+    6
+   ],
+   "professional_law": [
+    3,
+    6
+   ],
+   "professional_medicine": [
+    2,
+    6
+   ],
+   "professional_psychology": [
+    4,
+    6
+   ],
+   "public_relations": [
+    4,
+    6
+   ],
+   "security_studies": [
+    3,
+    6
+   ],
+   "sociology": [
+    4,
+    6
+   ],
+   "us_foreign_policy": [
+    5,
+    6
+   ],
+   "virology": [
+    1,
+    6
+   ],
+   "world_religions": [
+    2,
+    6
+   ]
+  }
+ }
+}

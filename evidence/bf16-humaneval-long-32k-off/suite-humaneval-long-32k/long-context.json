@@ -1,0 +1,39 @@
+{
+ "name": "long-context",
+ "score": 1.0,
+ "cases": 3,
+ "passed": 3,
+ "seconds": 4.754502773284912,
+ "notes": [
+  "needles 3/3 to 7k, facts , slowest prefill 4461 tok/s"
+ ],
+ "details": {
+  "needles": [
+   {
+    "tokens": 7068,
+    "depth": 0.1,
+    "found": true,
+    "seconds": 1.5819887090474367,
+    "prefill_tok_s": 4467.794213433961,
+    "reply": "7-4-3-3-5"
+   },
+   {
+    "tokens": 7071,
+    "depth": 0.5,
+    "found": true,
+    "seconds": 1.5804032500600442,
+    "prefill_tok_s": 4474.174549901331,
+    "reply": "7-4-3-3-5"
+   },
+   {
+    "tokens": 7099,
+    "depth": 0.9,
+    "found": true,
+    "seconds": 1.5912603329634294,
+    "prefill_tok_s": 4461.243614851769,
+    "reply": "7-4-3-3-5"
+   }
+  ],
+  "facts": []
+ }
+}
