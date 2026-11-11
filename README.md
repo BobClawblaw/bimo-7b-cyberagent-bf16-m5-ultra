@@ -62,7 +62,8 @@ templates). A request with `tools` alone on the published template gets prose.
 
 ## What works, and how it was checked
 
-All on one M5 Ultra (256 GB, macOS 27), checkpoint revision 9c1954d8, engine commit 7662e079 (10 Nov 2026).
+All on one M5 Ultra (256 GB, macOS 27), checkpoint revision 9c1954d8, engine commit 7662e079 (10 Nov 2026); the
+pinned 4cc353f0 adds that commit's engine doc and changes no code.
 
 - **Text, greedy and sampled.** Against a float64 run of the release's own arithmetic
   (`tools/zig/llama_f64_reference.py`, the biases and YaRN at HF's rounding points), 192 teacher-forced positions

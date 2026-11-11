@@ -13,7 +13,7 @@ model_dir = "~/models/Bimo-7B-CyberAgent"
 # TensorFold's native Metal engine with the llama family's Qwen2 support: a worktree of tensorfold_src at
 # tensorfold_sha, built by `python3 -m mac build` under tf_cache; `binary` names a built tensorfold-native instead
 tensorfold_src = "~/github/TensorFold"   # a clone holding tensorfold_sha (github.com/BobClawblaw/TensorFold)
-tensorfold_sha = "7662e079c6f9227fc0c706be50e6658952696da1"   # branch llama-qwen2
+tensorfold_sha = "4cc353f0be4c7cb457a3acc6c99fd34bade527b6"   # branch llama-qwen2 (7662e079 plus its doc)
 zig = "zig"                      # Zig 0.17.0
 zig_cpu = "native"
 binary = ""
