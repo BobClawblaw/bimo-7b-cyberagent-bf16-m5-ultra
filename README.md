@@ -172,7 +172,10 @@ between 40 and 64 tokens/s across runs because other applications share it (`evi
   for MMLU), so its figures compare recipes on this suite, not with the model card's lm-eval settings.
 - The engine's doc for the family's Qwen2 path, with the kernel contract's summary, is
   `docs/recipes/bimo-7b-cyberagent-metal.md` in the pinned TensorFold branch; its commit 9f1a37eb on the branch
-  adds the quality figures above and changes no code, so the recipe stays pinned at the measured 4cc353f0.
+  adds the quality figures above and changes no code, so the recipe stays pinned at the measured 4cc353f0 (also
+  the fork tag `bimo-4cc353f0b`). The upstream pull request is
+  [ashhart/TensorFold#2890](https://github.com/ashhart/TensorFold/pull/2890), the same commits rebased onto
+  TensorFold 1.2.7 as fork branch `llama-qwen2-pr`.
 - No tensorfold.dev leaderboard entry: the board's community-v1 protocol wants five full 256-token repetitions a
   cell, and the model ends the chat fixture at its own end token after 111 tokens on the protocol's second seed at
   temperature 1, so the chat cell cannot be measured (code ran 50-53 tokens/s at temperature 1 in that attempt).
