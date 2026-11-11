@@ -1,0 +1,7 @@
+{
+ "mac": {
+  "output": "System-wide memory free percentage: 89%\ntotal = 13312.00M  used = 11952.75M  free = 1359.25M  (encrypted)",
+  "available_gib": null,
+  "exit": 0
+ }
+}

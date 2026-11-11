@@ -1,0 +1,40 @@
+# The recipe's defaults. `local.toml` next to this file overrides them for one Mac (copy local.example.toml); an
+# environment variable of the same name in upper case overrides both (PORT=8896 python3 -m mac up).
+
+[model]
+# The release as published (bf16, 15.2 GB; nothing is converted):
+# hf download iBimo-o/Bimo-7B-CyberAgent --revision <model_revision> --local-dir <model_dir>
+model_repo = "iBimo-o/Bimo-7B-CyberAgent"
+model_revision = "9c1954d83d1768720912a8ebdff5db1fdcfb4f87"
+served_name = "bimo"
+model_dir = "~/models/Bimo-7B-CyberAgent"
+
+[engine]
+# TensorFold's native Metal engine with the llama family's Qwen2 support: a worktree of tensorfold_src at
+# tensorfold_sha, built by `python3 -m mac build` under tf_cache; `binary` names a built tensorfold-native instead
+tensorfold_src = "~/github/TensorFold"   # a clone holding tensorfold_sha (github.com/BobClawblaw/TensorFold)
+tensorfold_sha = "7662e079c6f9227fc0c706be50e6658952696da1"   # branch llama-qwen2
+zig = "zig"                      # Zig 0.17.0
+zig_cpu = "native"
+binary = ""
+
+[local]
+host = "127.0.0.1"
+port = 8896
+tf_cache = "~/.cache/bimo-7b-cyberagent"
+
+[serve]
+context = 32768                  # a stream's window: the release's YaRN window (max_position_embeddings)
+parallel = 2                     # streams decoded together, each reply equal to its run alone
+max_tokens = 8192                # a reply's default ceiling
+temperature = "0.7"              # the release's generation_config for requests that set none
+top_p = "0.8"
+top_k = "20"
+prompt_cache_gib = 4             # kept prompt states between turns
+load_limit_gb = 40               # LLAMA_LOAD_LIMIT_GB: weights, scratch and every stream's caches (0: 75% of RAM)
+drafts = false                   # the lane engine's copy drafts: off, 1.05 tokens a round here and 6% slower (replies identical either way)
+chat_template = ""               # "" serves the published template (no tools rendering); "templates/qwen25-coder-tools.jinja"
+                                 # renders a request's tools as the base model's template does (README: Tool calls)
+keep_warm = 86400
+api_key = ""
+extra_args = ""

@@ -1,0 +1,102 @@
+{
+ "turn1": {
+  "status": 200,
+  "text": "Three rivers in Europe are the Danube, the Rhine, and the Volga.",
+  "ttft": 1.201,
+  "ttft_any": 1.201,
+  "usage": {
+   "prompt_tokens": 5505,
+   "completion_tokens": 19,
+   "total_tokens": 5524,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0
+   }
+  },
+  "s": 1.662,
+  "finish": "stop",
+  "tool_calls": null
+ },
+ "turn2": {
+  "status": 200,
+  "text": "The Volga is the longest river in Europe, with a length of approximately 3,532 miles (5,694 kilometers).",
+  "ttft": 0.115,
+  "ttft_any": 0.115,
+  "usage": {
+   "prompt_tokens": 5539,
+   "completion_tokens": 31,
+   "total_tokens": 5570,
+   "prompt_tokens_details": {
+    "cached_tokens": 5493
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0
+   }
+  },
+  "s": 0.954,
+  "finish": "stop",
+  "tool_calls": null
+ },
+ "turn3": {
+  "status": 200,
+  "text": "The shortest river in Europe is the Mura, which is approximately 100 miles (160 kilometers) long.",
+  "ttft": 0.106,
+  "ttft_any": 0.106,
+  "usage": {
+   "prompt_tokens": 5583,
+   "completion_tokens": 27,
+   "total_tokens": 5610,
+   "prompt_tokens_details": {
+    "cached_tokens": 5493
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0
+   }
+  },
+  "s": 0.682,
+  "finish": "stop",
+  "tool_calls": null
+ },
+ "turn3_again": {
+  "status": 200,
+  "text": "The shortest river in Europe is the Mura, which is approximately 100 miles (160 kilometers) long.",
+  "ttft": 0.109,
+  "ttft_any": 0.109,
+  "usage": {
+   "prompt_tokens": 5583,
+   "completion_tokens": 27,
+   "total_tokens": 5610,
+   "prompt_tokens_details": {
+    "cached_tokens": 5493
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0
+   }
+  },
+  "s": 0.627,
+  "finish": "stop",
+  "tool_calls": null
+ },
+ "turn3_cold": {
+  "status": 200,
+  "text": "The shortest river in Europe is the Mura, which is approximately 100 miles (160 kilometers) long.",
+  "ttft": 1.082,
+  "ttft_any": 1.082,
+  "usage": {
+   "prompt_tokens": 5583,
+   "completion_tokens": 27,
+   "total_tokens": 5610,
+   "prompt_tokens_details": {
+    "cached_tokens": 0
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 0
+   }
+  },
+  "s": 1.715,
+  "finish": "stop",
+  "tool_calls": null
+ }
+}
