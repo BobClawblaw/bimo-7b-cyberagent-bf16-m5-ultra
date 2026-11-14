@@ -1,0 +1,20 @@
+{
+ "ok": false,
+ "summary": "FAILED: 4 replies called no tool; 4 replies, 0/4 trail modules read, 0 repeat reads, longest identical run 2, peak prompt 2561 tokens, 122.6 s",
+ "metrics": {
+  "right": false,
+  "why": "4 replies called no tool",
+  "replies": 4,
+  "hops": 4,
+  "trail_read": 0,
+  "repeat_reads": 0,
+  "longest_identical": 2,
+  "nudges": 4,
+  "peak_prompt_tokens": 2561,
+  "completion_tokens": 3131,
+  "seconds": 122.6
+ },
+ "name": "agentic-off",
+ "type": "agentic",
+ "seconds": 122.6
+}

@@ -1,0 +1,82 @@
+{
+ "spec": {
+  "context": 32768,
+  "hops": 4,
+  "file_tokens": 6000,
+  "max_tokens": 1024,
+  "seed": "agentic-1",
+  "thinking": false,
+  "temperature": 0.0,
+  "tool_choice": "required"
+ },
+ "trail": [
+  "app/main.py",
+  "util/offset_packet.py",
+  "core/token_signal.py",
+  "services/merge_filter.py",
+  "core/token_client.py"
+ ],
+ "want": 308,
+ "answer": 407,
+ "why": "answered 407, the live value is 308",
+ "reads": {
+  "app/main.py": 1,
+  "util/offset_packet.py": 1
+ },
+ "turns": [
+  {
+   "status": 200,
+   "finish": "tool_calls",
+   "prompt_tokens": 368,
+   "cached_tokens": 290,
+   "completion_tokens": 28,
+   "seconds": 0.951,
+   "fingerprint": "d6b1551b3f3e",
+   "text": "",
+   "reasoning_chars": 0,
+   "calls": [
+    {
+     "name": "read_file",
+     "arguments": "{\"path\":\"app/main.py\"}"
+    }
+   ],
+   "error": null
+  },
+  {
+   "status": 200,
+   "finish": "tool_calls",
+   "prompt_tokens": 437,
+   "cached_tokens": 290,
+   "completion_tokens": 30,
+   "seconds": 1.149,
+   "fingerprint": "475c9a55b3ea",
+   "text": "",
+   "reasoning_chars": 0,
+   "calls": [
+    {
+     "name": "read_file",
+     "arguments": "{\"path\":\"util/offset_packet.py\"}"
+    }
+   ],
+   "error": null
+  },
+  {
+   "status": 200,
+   "finish": "tool_calls",
+   "prompt_tokens": 6213,
+   "cached_tokens": 290,
+   "completion_tokens": 28,
+   "seconds": 2.104,
+   "fingerprint": "c754167b5b12",
+   "text": "",
+   "reasoning_chars": 0,
+   "calls": [
+    {
+     "name": "submit_answer",
+     "arguments": "{\"value\":407}"
+    }
+   ],
+   "error": null
+  }
+ ]
+}

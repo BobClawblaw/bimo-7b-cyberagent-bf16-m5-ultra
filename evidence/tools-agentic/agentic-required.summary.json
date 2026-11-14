@@ -1,0 +1,20 @@
+{
+ "ok": false,
+ "summary": "FAILED: answered 407, the live value is 308; 3 replies, 1/4 trail modules read, 0 repeat reads, longest identical run 1, peak prompt 6213 tokens, 4.2 s",
+ "metrics": {
+  "right": false,
+  "why": "answered 407, the live value is 308",
+  "replies": 3,
+  "hops": 4,
+  "trail_read": 1,
+  "repeat_reads": 0,
+  "longest_identical": 1,
+  "nudges": 0,
+  "peak_prompt_tokens": 6213,
+  "completion_tokens": 86,
+  "seconds": 4.2
+ },
+ "name": "agentic-required",
+ "type": "agentic",
+ "seconds": 4.2
+}

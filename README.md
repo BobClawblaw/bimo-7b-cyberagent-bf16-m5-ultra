@@ -60,6 +60,16 @@ into `tool_calls` and `tool_choice: required` is honoured; the harness's tool ca
 case with two tools gets a fabricated `<tool_response>` instead of a call: the model's habit, the same with both
 templates). A request with `tools` alone on the published template gets prose.
 
+**Tool calling is unreliable; agents should send `tool_choice: required`.** In the harness's long agentic session
+(follow a value through four 6,000-token modules with `list_files`, `read_file` and `submit_answer`; the opt-in
+template, engine 3c74a3ccb, the #2890 review head; `evidence/tools-agentic`), with `tool_choice: auto` the model made no call in four replies: it said it would
+call `read_file`, then wrote a `<tool_response>` with invented file contents that degenerated into a repeated import
+line. With `tool_choice: required` every reply was a well-formed call, but it read one module and submitted the
+superseded value written there (407; the live value is 308). The engine parses and constrains calls correctly
+(Qwen3.8-27B passes the same session at 262k tokens on this engine); what fails is the 7B fine-tune's choice to call
+and its following of a multi-step trail. Use `tool_choice: required` with a tool the agent calls to finish, and check
+its answers; for long multi-step agent work, use a larger model.
+
 ## What works, and how it was checked
 
 All on one M5 Ultra (256 GB, macOS 27), checkpoint revision 9c1954d8, engine commit 7662e079 (10 Nov 2026); the
@@ -79,7 +89,8 @@ pinned 4cc353f0 adds that commit's engine doc and changes no code.
 - **Tools and structured output.** The harness's structured check (json_object, json_schema, regex, choice,
   grammar) 18/18 and drafted == plain 12/12; its tool cases (auto, required, named, thinking, streamed) 4/5 with the
   published template and 4/5 with the opt-in one ([above](#settings); `evidence/bf16-quick`,
-  `evidence/tools-template-quick`).
+  `evidence/tools-template-quick`); the long agentic session fails with either `tool_choice` ([above](#settings);
+  `evidence/tools-agentic`).
 - **Prompt cache.** The harness's third turn resumed from 5,493 of its 5,583 tokens equals the same request after a
   restart and starts in 0.13 s against 1.06 s cold (`evidence/bf16-speed`); a 13,182-token second turn resumed from
   13,147 kept tokens in the recipe's own check, same reply. Turns shorter than a 2,048-token prompt chunk keep no
